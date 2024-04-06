@@ -8,8 +8,8 @@ import pygame
 
 class Ship:
     '''管理飞船的类'''
-    def __init__(self, ai_game):
-        ''' 初始化飞船并设置其初始位置 '''
+    def __init__(self, ai_game):  # ai_game是AlienInvasion类的实例
+        """ 初始化飞船并设置其初始位置 """
         self.screen = ai_game.screen
         self.screen_rect = ai_game.screen.get_rect()
 
@@ -20,6 +20,7 @@ class Ship:
         # 对于每一艘新飞船，都将其放在屏幕底部的中央
         self.rect.midbottom = self.screen_rect.midbottom
 
+    # 绘制飞船的函数
     def blitme(self):
-        '''在指定位置绘制飞船'''
+        """ 在指定位置绘制飞船 """
         self.screen.blit(self.image, self.rect)
